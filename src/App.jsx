@@ -17,11 +17,10 @@ function App() {
         <Route path="/rooms/edit/:id" element={<EditRoom />} />
         <Route path="/rooms/delete/:id" element={<DeleteRoom />} />
 
-
         <Route path="/*" element={<NotFound />} />
       </Routes>
     </>
   )
 }
 
-export default App
+export default App;

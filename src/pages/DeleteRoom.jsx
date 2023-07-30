@@ -10,7 +10,7 @@ const DeleteRoom = () => {
 
   const [deleteRoom, { error: err }] = useMutation(REMOVE_ROOM, {
     refetchQueries: [
-      {query: GET_ROOMS}
+      { query: GET_ROOMS }
     ]
   });
 

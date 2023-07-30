@@ -91,7 +91,6 @@ const ListRooms = () => {
               </button>
             </div>
 
-
             <form onSubmit={submitForm} className=" d-flex gap-3 input-group mb-3 w-50">
               <input
                 className="form-control"
@@ -109,24 +108,24 @@ const ListRooms = () => {
           <ul className="list-unstyled d-flex flex-column align-items-center  gap-5">
             {
               data?.roomsList.list.length > 0 ?
-              data?.roomsList.list.map((room) => (
-                <li key={room.id} className="w-75">
-                  <Card>
-                    <Card.Header as="h2" className="text-center">{room.name}</Card.Header>
-                    <Card.Body className="d-flex justify-content-between align-items-center px-5">
-                      <Card.Title>Floor: {room.floor}</Card.Title>
-                      <div className="d-flex gap-3">
-                        <Link to={`/rooms/${room.id}`} className="btn btn-primary"><i className="fa-solid fa-eye"></i></Link>
-                        <Link to={`/rooms/edit/${room.id}`} state={{ name: room.name, floor: room.floor, for_stuff: room.for_stuff }} className="btn btn-success"><i className="fa-solid fa-pen-to-square"></i></Link>
-                        <Link to={`/rooms/delete/${room.id}`} className="btn btn-danger"><i className="fa-solid fa-trash"></i></Link>
-                      </div>
-                    </Card.Body>
-                  </Card>
-                </li>
-              )) :
-              <div className="text-light">
-                <h2>Xonalar qolmadi</h2>
-              </div>
+                data?.roomsList.list.map((room) => (
+                  <li key={room.id} className="w-75">
+                    <Card>
+                      <Card.Header as="h2" className="text-center">{room.name}</Card.Header>
+                      <Card.Body className="d-flex justify-content-between align-items-center px-5">
+                        <Card.Title>Floor: {room.floor}</Card.Title>
+                        <div className="d-flex gap-3">
+                          <Link to={`/rooms/${room.id}`} className="btn btn-primary"><i className="fa-solid fa-eye"></i></Link>
+                          <Link to={`/rooms/edit/${room.id}`} state={{ name: room.name, floor: room.floor, for_stuff: room.for_stuff }} className="btn btn-success"><i className="fa-solid fa-pen-to-square"></i></Link>
+                          <Link to={`/rooms/delete/${room.id}`} className="btn btn-danger"><i className="fa-solid fa-trash"></i></Link>
+                        </div>
+                      </Card.Body>
+                    </Card>
+                  </li>
+                )) :
+                <div className="text-light">
+                  <h2>Xonalar qolmadi</h2>
+                </div>
             }
           </ul>
 

@@ -4,8 +4,6 @@ import Form from 'react-bootstrap/Form';
 import { Link, useNavigate } from "react-router-dom";
 import { NEW_ROOM, GET_ROOMS } from '../apollo/rooms';
 
-
-
 const AddRoom = () => {
   let navigate = useNavigate()
 
@@ -116,7 +114,6 @@ const AddRoom = () => {
 
           <button type="submit" className="btn btn-success w-25 mt-3">Add</button>
         </Form>
-
 
       </div>
     </div>

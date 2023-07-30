@@ -1,7 +1,7 @@
 import { useMutation, useQuery } from "@apollo/client";
 import { useState } from "react";
 import Form from 'react-bootstrap/Form';
-import { Link, useNavigate, useParams, useLocation  } from "react-router-dom";
+import { Link, useNavigate, useParams, useLocation } from "react-router-dom";
 import { EDIT_ROOM } from '../apollo/rooms';
 
 const EditRoom = () => {
@@ -113,7 +113,6 @@ const EditRoom = () => {
 
           <button type="submit" className="btn btn-success w-25 mt-3">Edit</button>
         </Form>
-
 
       </div>
     </div>
