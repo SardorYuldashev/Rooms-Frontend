@@ -44,6 +44,8 @@ const AddRoom = () => {
       }
     });
 
+    localStorage.setItem("render", true);
+
     navigate('/rooms');
   };
 

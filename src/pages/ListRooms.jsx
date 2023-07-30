@@ -1,5 +1,5 @@
 import { useLazyQuery, useQuery } from "@apollo/client";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 import { GET_ROOMS } from '../apollo/rooms';
 import Pagination from 'react-bootstrap/Pagination';
@@ -8,10 +8,20 @@ import { useEffect, useState } from "react";
 let limit = 5;
 
 const ListRooms = () => {
+  let navigate = useNavigate();
   const [offset, setOffset] = useState(0);
   const [q, setQ] = useState(null);
   const [values, setValues] = useState({ q: "" });
   const [order, setOrder] = useState("ASC");
+
+  let refresh = JSON.parse(localStorage.getItem("render")) || false;
+
+  useEffect(() => {
+    if (refresh) {
+      localStorage.setItem("render", false);
+      navigate(0)    
+    };
+  }, [])
 
   const [getRooms, { loading, error, data }] = useLazyQuery(GET_ROOMS);
 
