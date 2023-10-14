@@ -7,7 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:8080/gql',
+  // uri: 'http://localhost:8080/gql',
+  uri: 'https://rooms-gql.up.railway.app/gql',
   cache: new InMemoryCache()
 });
 
