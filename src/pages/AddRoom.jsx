@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { NEW_ROOM, GET_ROOMS } from '../apollo/rooms';
 
 const AddRoom = () => {
-  let navigate = useNavigate()
+  let navigate = useNavigate();
 
   const [name, setName] = useState('');
   const [floor, setFloor] = useState('');
@@ -27,7 +27,7 @@ const AddRoom = () => {
 
   const [newRoom, { error }] = useMutation(NEW_ROOM, {
     refetchQueries: [
-      {query: GET_ROOMS}
+      { query: GET_ROOMS }
     ]
   });
 
@@ -46,7 +46,7 @@ const AddRoom = () => {
 
     localStorage.setItem("render", true);
 
-    navigate('/rooms');
+    navigate('/');
   };
 
   if (error) {
@@ -68,7 +68,7 @@ const AddRoom = () => {
   return (
     <div className="bg-dark text-light min-vh-100 py-5">
       <div className="container">
-        <Link to={`/rooms`} className="fs-2 text-light btn btn-success w-25 mb-5">
+        <Link to={`/`} className="fs-2 text-light btn btn-success w-25 mb-5">
           <i className="fa-solid fa-arrow-left"></i>
         </Link>
         <div className="d-flex align-items-center justify-content-center flex-column gap-4 mb-5">

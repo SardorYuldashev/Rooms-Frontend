@@ -8,7 +8,8 @@ import { useEffect, useState } from "react";
 let limit = 5;
 
 const ListRooms = () => {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
+
   const [offset, setOffset] = useState(0);
   const [q, setQ] = useState(null);
   const [values, setValues] = useState({ q: "" });
@@ -19,9 +20,9 @@ const ListRooms = () => {
   useEffect(() => {
     if (refresh) {
       localStorage.setItem("render", false);
-      navigate(0)    
+      navigate(0);
     };
-  }, [])
+  }, []);
 
   const [getRooms, { loading, error, data }] = useLazyQuery(GET_ROOMS);
 
@@ -67,7 +68,7 @@ const ListRooms = () => {
     return (
       <div className="bg-dark text-light min-vh-100 py-5">
         <div className="container">
-          <Link to={`/rooms`} className="fs-2 text-light btn btn-success w-25 mb-5">
+          <Link to={`/`} className="fs-2 text-light btn btn-success w-25 mb-5">
             <i className="fa-solid fa-arrow-left"></i>
           </Link>
 

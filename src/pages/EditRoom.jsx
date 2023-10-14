@@ -46,7 +46,7 @@ const EditRoom = () => {
       }
     });
 
-    navigate('/rooms');
+    navigate('/');
   };
 
   if (error) {
@@ -68,7 +68,7 @@ const EditRoom = () => {
   return (
     <div className="bg-dark text-light min-vh-100 py-5">
       <div className="container">
-        <Link to={`/rooms`} className="fs-2 text-light btn btn-success w-25 mb-5">
+        <Link to={`/`} className="fs-2 text-light btn btn-success w-25 mb-5">
           <i className="fa-solid fa-arrow-left"></i>
         </Link>
         <div className="d-flex align-items-center justify-content-center flex-column gap-4 mb-5">

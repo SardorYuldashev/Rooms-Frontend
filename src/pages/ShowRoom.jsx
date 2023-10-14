@@ -11,7 +11,7 @@ const ShowRoom = () => {
     return (
       <div className="bg-dark text-light min-vh-100 py-5">
         <div className="container">
-          <Link to={`/rooms`} className="fs-2 text-light btn btn-success w-25 mb-5">
+          <Link to={`/`} className="fs-2 text-light btn btn-success w-25 mb-5">
             <i className="fa-solid fa-arrow-left"></i>
           </Link>
 
@@ -30,7 +30,7 @@ const ShowRoom = () => {
     : (
       <div className="bg-dark text-light py-5 min-vh-100">
         <div className="container">
-          <Link to={`/rooms`} className="fs-2 text-light btn btn-success w-25 mb-5">
+          <Link to={`/`} className="fs-2 text-light btn btn-success w-25 mb-5">
             <i className="fa-solid fa-arrow-left"></i>
           </Link>
           <div className="text-center my-5">

@@ -4,8 +4,7 @@ import App from './App.jsx';
 import './index.css';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const client = new ApolloClient({
   uri: 'http://localhost:8080/gql',
